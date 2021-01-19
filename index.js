@@ -221,11 +221,12 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(num){
-  for(i=num; i = 1; i--){
-    i = i.toString();
-    return i +" bottles of soda on the wall, " + i + " bottles of soda, take one down pass it around " + (Number(i) - 1) + " bottles of soda on the wall";
+  let num1 = num;
+  while (num1 > 2){
+    num1 = num1 -1;
+    return (num1+1) +" bottles of soda on the wall, " + (num1+1) + " bottles of soda, take one down pass it around " + num1 + " bottles of soda on the wall";
+    }
   }
-}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -243,9 +244,23 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(percent){
+  if(percent <=100 && percent >= 90){
+    return 'you got an A';
   }
+  if(percent <=89 && percent >= 80){
+    return 'you got a B';
+  }
+  if(percent <=79 && percent >= 70){
+    return 'you got a C';
+  }
+  if(percent <=69 && percent >= 60){
+    return 'you got a D';
+  }
+  if(percent <=59){
+    return 'you got an F';
+  }
+}
   
   
 
