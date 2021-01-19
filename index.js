@@ -159,19 +159,19 @@ Use the game function below to do the following:
 */
 let computer = Math.random();
     if(computer >= 0 && computer <= (1/3)){
-      computer = "Rock";
+      computer = "rock";
     }else if(computer > (1/3) && computer <= (2/3)){
-      computer = "Paper"; 
+      computer = "paper"; 
     }else if(computer > (2/3) && computer <= 1){
-      computer = "Scissors"; 
+      computer = "scissors"; 
     }
 function game(user, computer){
     let userChoice = user;
     if(userChoice === computer){
       return "it's a tie";
-    }else if(userChoice === "Rock" && computer === "Paper" || userChoice === "Paper" && computer === "Scissors" || userChoice === "Scissors" && computer === "Rock" ){
+    }else if(userChoice === "rock" && computer === "paper" || userChoice === "paper" && computer === "scissors" || userChoice === "scissors" && computer === "rock" ){
       return "you lose!";
-    }else if(userChoice === "Paper" && computer === "Rock" || userChoice === "Scissors" && computer === "Paper" || userChoice === "Rock" && computer === "Scissors"){
+    }else if(userChoice === "paper" && computer === "rock" || userChoice === "scissors" && computer === "paper" || userChoice === "rock" && computer === "scissors"){
       return "you win!";
     }
 }
@@ -188,9 +188,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(km){
+  let conversion = km * 0.621371
+  return conversion;
+}
 
 
 
@@ -202,9 +203,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
+function feet(cm){
+  let cmConversion = cm / 30.48;
+  return cmConversion;
+}
  
 
 
@@ -218,9 +220,12 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(num){
+  for(i=num; i = 1; i--){
+    i = i.toString();
+    return i +" bottles of soda on the wall, " + i + " bottles of soda, take one down pass it around " + (Number(i) - 1) + " bottles of soda on the wall";
   }
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
