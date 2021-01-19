@@ -17,7 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 22;
+if(votingAge > 18){
+  console.log(true);
+}
 
 
 /*
@@ -30,7 +33,12 @@ Do the following:
 
    HINT: no function required
 */
-
+let a = 1;
+const b = 2;
+if(a < b){
+  a = 'hello';
+  console.log(a);
+}
 
 
 
@@ -45,7 +53,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+let myString = "1999";
+myString = Number("1999");
+console.log(myString);
 
 
 
@@ -74,8 +84,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age*7;
 }
 
 
@@ -106,11 +116,25 @@ Use the hungryDog function and feeding requirements below to do the following:
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
-
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight,age){
+  let food;
+  if(age < (4/12)){
+    food = weight * .1;
+  }else if (age < (7/12) && age > (4/12)){
+    food = weight * .05;
+  }else if (age < 1 && age > (7/12)){
+    food = weight * .04;
+  }else if (age >= 1 && weight < 5){
+    food = weight * .05;
+  }else if (age >= 1 && weight < 10 && weight > 5){
+    food = weight * .04;
+  }else if (age >= 1 && weight <= 15 && weight > 10){
+    food = weight * .03;
+  }else if (age >= 1 && weight > 15){
+    food = weight * .02;
   }
-
+  return food;
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -133,12 +157,25 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
+let computer = Math.random();
+    if(computer >= 0 && computer <= (1/3)){
+      computer = "Rock";
+    }else if(computer > (1/3) && computer <= (2/3)){
+      computer = "Paper"; 
+    }else if(computer > (2/3) && computer <= 1){
+      computer = "Scissors"; 
+    }
 function game(user, computer){
-    /*add your code here*/
+    let userChoice = user;
+    if(userChoice === computer){
+      return "it's a tie";
+    }else if(userChoice === "Rock" && computer === "Paper" || userChoice === "Paper" && computer === "Scissors" || userChoice === "Scissors" && computer === "Rock" ){
+      return "you lose!";
+    }else if(userChoice === "Paper" && computer === "Rock" || userChoice === "Scissors" && computer === "Paper" || userChoice === "Rock" && computer === "Scissors"){
+      return "you win!";
+    }
 }
-  
-  
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
